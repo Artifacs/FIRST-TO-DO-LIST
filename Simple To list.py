@@ -1,0 +1,5 @@
+print("Welcome to do list organizer please Enter Your Task")
+User_task_Input = input("What is your task?: " )
+print("Please Enter the time you want to complete your task")
+Time_User_Task = input("What time do you want to complete your task?: " )
+print("Your Task is: " + User_task_Input + " And You want to complete your task at " + Time_User_Task)
