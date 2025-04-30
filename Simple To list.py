@@ -1,11 +1,16 @@
 tasks = []
 
-Start = input("Welcome to task organizer\ndo you want to get organize right now?(Y/N): ")
-
-if Start == "Y":
-    taking_tasks = input("What is your first task you want to input?")
+def task_adder():
+    taking_tasks = input("What is your first task you want to input?: ")
     tasks.append(taking_tasks)
-    print(f"Your task {len(tasks)} {tasks}")
+    
+    more = input("Do you want to add another task? (Y/N): ")
+    if more.lower() == 'y':
+        task_adder()
+    else:
+        print("Your tasks are:")
+        for i in range(len(tasks)):
+            print(f"{i + 1}. {tasks[i]}")
 
-else:
-    print("HAVE A NICE DAY!")
+task_adder()
+
